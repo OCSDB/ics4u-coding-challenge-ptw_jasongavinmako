@@ -1,4 +1,4 @@
-#Mandlebrot Set
+# Mandlebrot Set
 
 By Gavin MacNabb & Micheal Han
 
