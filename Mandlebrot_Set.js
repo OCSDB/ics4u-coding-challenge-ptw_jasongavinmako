@@ -4,7 +4,7 @@ createCanvas(360, 360);
 	colorMode (HSB, 1);
 pixelDensity(1);
 }
-//changes canvas size
+//changes size
 var minval = -2;
 var maxval = 2;
 	function draw (){
