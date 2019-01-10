@@ -1,6 +1,6 @@
 # Mandelbrot Set
 
-By Gavin MacNabb & Micheal Han
+By Gavin MacNabb & Michael Han
 
 Online p5.js Web Editor: https://editor.p5js.org/
 
