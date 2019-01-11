@@ -1,0 +1,44 @@
+function setup() {
+  createCanvas(360, 240);
+  colorMode(HSB, 255);
+}
+
+function draw() {  
+  var maxIter = 80;
+  for (var x = 0; x < width; x++) {
+    for(var y = 0; y < height; y++) {
+      
+      var a = map(x, 0, width, -2, 2);
+      var b = map(y, 0, height, -2, 2);
+      
+      var ca = a;
+      var cb = b;
+      
+      var z = 0;
+      
+      //calculating real and complex componenets for the next generation
+      for(var n = 0; n < maxIter; n++) {
+        var aa = a * a - b * b;
+        var bb = 2 * a * b;
+        
+        a = aa + ca;
+        b = bb + cb;
+        
+        if (abs(a + b) > 16) {
+          break;
+        }
+      }
+      
+      var hue = 255 * n / maxIter;
+      var bright = 255;
+      if (n == maxIter) {
+        //calculates numbers that are in the mandelbrot set
+        bright = 0;
+      }
+      noStroke();
+      stroke(hue, 255, bright);
+			point(x, y);
+      // noprotect
+    }
+  }
+}
